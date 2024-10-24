@@ -8,3 +8,5 @@ export { default as BookMark } from "./components/icons/BookMark";
 export { default as Bell } from "./components/icons/Bell";
 export { default as Bubble } from "./components/icons/Bubble";
 export { default as BubblePlus } from "./components/icons/BubblePlus";
+export { default as BusinessBag } from "./components/icons/BusinessBag";
+export { default as Camera } from "./components/icons/Camera";
