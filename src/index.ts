@@ -10,3 +10,4 @@ export { default as Bubble } from "./components/icons/Bubble";
 export { default as BubblePlus } from "./components/icons/BubblePlus";
 export { default as BusinessBag } from "./components/icons/BusinessBag";
 export { default as Camera } from "./components/icons/Camera";
+export { default as Check } from "./components/icons/Check";
