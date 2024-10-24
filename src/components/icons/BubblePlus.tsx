@@ -5,10 +5,7 @@ interface BubblePlusProps {
   color?: string;
 }
 
-const BubblePlus: React.FC<BubblePlusProps> = ({
-  fill = false,
-  color = "#171719",
-}) => {
+const BubblePlus: React.FC<BubblePlusProps> = ({ fill, color = "#171719" }) => {
   const iconData = {
     filled: {
       path1: `
