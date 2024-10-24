@@ -3,11 +3,13 @@ import React from "react";
 interface ChevronLeftDoubleProps {
   thick?: boolean;
   small?: boolean;
+  color?: string;
 }
 
 const ChevronLeftDouble: React.FC<ChevronLeftDoubleProps> = ({
   thick,
   small,
+  color = "#171719",
 }) => {
   const renderIcon = (pathData: string) => (
     <svg
@@ -17,7 +19,7 @@ const ChevronLeftDouble: React.FC<ChevronLeftDoubleProps> = ({
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <path fillRule="evenodd" clipRule="evenodd" d={pathData} fill="#171719" />
+      <path fillRule="evenodd" clipRule="evenodd" d={pathData} fill={color} />
     </svg>
   );
 
