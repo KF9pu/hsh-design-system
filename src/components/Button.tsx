@@ -2,13 +2,17 @@ import React from "react";
 
 interface ButtonProps {
   label: string;
+  size: "normal" | "small";
   onClick: () => void;
 }
 
-const Button: React.FC<ButtonProps> = ({ label, onClick }) => {
+const Button: React.FC<ButtonProps> = ({ label, onClick, size }) => {
   return (
     <button
-      className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-red-600"
+      className="btn"
+      style={{
+        padding: size === "small" ? "12px 8px" : "",
+      }}
       onClick={onClick}
     >
       {label}
