@@ -5,7 +5,7 @@ interface ChevronTightProps {
   small?: true;
   color?: string;
   up?: true;
-  left?: true;
+  down?: true;
   right?: true;
 }
 
@@ -13,14 +13,14 @@ const ChevronTight: React.FC<ChevronTightProps> = ({
   thick,
   small,
   up,
-  left,
+  down,
   right,
   color = "#171719",
 }) => {
   const renderIcon = (pathData: string) => (
     <svg
       style={{
-        rotate: up ? "180deg" : left ? "90deg" : right ? "270deg" : "",
+        rotate: up ? "90deg" : right ? "180deg" : down ? "270deg" : "",
       }}
       width="12"
       height="24"
