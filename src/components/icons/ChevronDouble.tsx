@@ -1,18 +1,23 @@
 import React from "react";
 
-interface ChevronLeftDoubleProps {
-  thick?: boolean;
-  small?: boolean;
+interface ChevronDoubleProps {
+  thick?: true;
+  small?: true;
   color?: string;
+  right?: true;
 }
 
-const ChevronLeftDouble: React.FC<ChevronLeftDoubleProps> = ({
+const ChevronDouble: React.FC<ChevronDoubleProps> = ({
   thick,
   small,
+  right,
   color = "#171719",
 }) => {
   const renderIcon = (pathData: string) => (
     <svg
+      style={{
+        rotate: right ? "180deg" : "0deg",
+      }}
       width="24"
       height="24"
       viewBox="0 0 24 24"
@@ -35,15 +40,15 @@ const ChevronLeftDouble: React.FC<ChevronLeftDoubleProps> = ({
     M11.636 6.13991C11.9875 5.78844 11.9875 5.21859 11.636 4.86712C11.2845 4.51565 10.7147 4.51565 10.3632 4.86712L3.86321 11.3671C3.69443 11.5359 3.59961 11.7648 3.59961 12.0035C3.59961 12.2422 3.69443 12.4711 3.86321 12.6399L10.3632 19.1399C10.7147 19.4914 11.2845 19.4914 11.636 19.1399C11.9875 18.7884 11.9875 18.2186 11.636 17.8671L5.7724 12.0035L11.636 6.13991ZM19.6362 6.13991C19.9877 5.78844 19.9877 5.21859 19.6362 4.86712C19.2847 4.51565 18.7149 4.51565 18.3634 4.86712L11.8634 11.3671C11.6946 11.5359 11.5998 11.7648 11.5998 12.0035C11.5998 12.2422 11.6946 12.4711 11.8634 12.6399L18.3634 19.1399C18.7149 19.4914 19.2847 19.4914 19.6362 19.1399C19.9877 18.7884 19.9877 18.2186 19.6362 17.8671L13.7726 12.0035L19.6362 6.13991Z
   `;
 
-  const largePath = `
+  const normalPath = `
     M11.637 4.63894C11.9885 4.28746 11.9885 3.71761 11.637 3.36614C11.2855 3.01467 10.7157 3.01467 10.3642 3.36614L2.36419 11.3661C2.01272 11.7176 2.01272 12.2875 2.36419 12.6389L10.3642 20.6389C10.7157 20.9904 11.2855 20.9904 11.637 20.6389C11.9885 20.2875 11.9885 19.7176 11.637 19.3661L4.27338 12.0025L11.637 4.63894ZM21.137 4.63933C21.4885 4.28785 21.4885 3.71801 21.137 3.36653C20.7855 3.01506 20.2157 3.01506 19.8642 3.36653L11.8642 11.3665C11.5127 11.718 11.5127 12.2879 11.8642 12.6393L19.8642 20.6393C20.2157 20.9908 20.7855 20.9908 21.137 20.6393C21.4885 20.2879 21.4885 19.718 21.137 19.3665L13.7734 12.0029L21.137 4.63933Z
   `;
 
   if (thick) {
     return small ? renderIcon(thickSmallPath) : renderIcon(thickPath);
   } else {
-    return small ? renderIcon(smallPath) : renderIcon(largePath);
+    return small ? renderIcon(smallPath) : renderIcon(normalPath);
   }
 };
 
-export default ChevronLeftDouble;
+export default ChevronDouble;
