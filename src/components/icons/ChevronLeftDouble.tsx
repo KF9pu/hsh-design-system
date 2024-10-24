@@ -1,11 +1,11 @@
 import React from "react";
 
-interface chevronDoubleLeftProps {
+interface ChevronLeftDoubleProps {
   thick?: true;
   small?: true;
 }
 
-const chevronDoubleLeft: React.FC<chevronDoubleLeftProps> = ({
+const ChevronLeftDouble: React.FC<ChevronLeftDoubleProps> = ({
   thick,
   small,
 }) => {
@@ -83,4 +83,4 @@ const chevronDoubleLeft: React.FC<chevronDoubleLeftProps> = ({
     </>
   );
 };
-export default chevronDoubleLeft;
+export default ChevronLeftDouble;
