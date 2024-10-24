@@ -2,6 +2,7 @@ import resolve from "@rollup/plugin-node-resolve";
 import commonjs from "@rollup/plugin-commonjs";
 import typescript from "rollup-plugin-typescript2";
 import postcss from "rollup-plugin-postcss";
+import del from "rollup-plugin-delete";
 
 export default {
   input: "src/index.ts", // 모듈의 진입점
@@ -19,6 +20,12 @@ export default {
       sourcemap: true,
     },
   ],
-  plugins: [resolve(), commonjs(), typescript(), postcss()],
+  plugins: [
+    del({ targets: "dist/*" }),
+    resolve(),
+    commonjs(),
+    typescript(),
+    postcss(),
+  ],
   external: ["react", "react-dom"], // 외부 의존성 제외
 };
