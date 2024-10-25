@@ -33,3 +33,5 @@ export { default as EyeSlash } from "./components/icons/EyeSlash";
 export { default as FaceSmile } from "./components/icons/FaceSmile";
 export { default as Filter } from "./components/icons/Filter";
 export { default as Folder } from "./components/icons/Folder";
+export { default as FolderJob } from "./components/icons/FolderJob";
+export { default as FolderStar } from "./components/icons/FolderStar";
