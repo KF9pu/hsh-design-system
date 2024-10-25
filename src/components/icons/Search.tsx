@@ -1,11 +1,14 @@
 import React from "react";
 
 interface SearchProps {
-  fill?: true;
+  thick?: true;
   color?: string;
 }
 
-const Search: React.FC<SearchProps> = ({ fill = false, color = "#171719" }) => {
+const Search: React.FC<SearchProps> = ({
+  thick = false,
+  color = "#171719",
+}) => {
   return (
     <svg
       width="24"
@@ -14,7 +17,7 @@ const Search: React.FC<SearchProps> = ({ fill = false, color = "#171719" }) => {
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
-      {fill ? (
+      {thick ? (
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
