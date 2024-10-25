@@ -54,3 +54,5 @@ export { default as Plus } from "./components/icons/Plus";
 export { default as Search } from "./components/icons/Search";
 export { default as Send } from "./components/icons/Send";
 export { default as Square } from "./components/icons/Square";
+export { default as SquarePlus } from "./components/icons/SquarePlus";
+export { default as Star } from "./components/icons/Star";
