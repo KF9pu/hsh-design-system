@@ -1,14 +1,10 @@
 import React from "react";
 
-interface XXX_SingleProps {
-  fill?: true;
+interface PlayProps {
   color?: string;
 }
 
-const XXX_Single: React.FC<XXX_SingleProps> = ({
-  fill = false,
-  color = "#171719",
-}) => {
+const Play: React.FC<PlayProps> = ({ color = "#171719" }) => {
   return (
     <svg
       width="24"
@@ -17,9 +13,9 @@ const XXX_Single: React.FC<XXX_SingleProps> = ({
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
-      {fill ? <></> : <></>}
+      <path d="M7.5 19V5L18.5 12L7.5 19Z" fill={color} />
     </svg>
   );
 };
 
-export default XXX_Single;
+export default Play;
