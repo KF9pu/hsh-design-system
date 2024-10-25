@@ -64,6 +64,7 @@ export { default as Trophy } from "./components/icons/Trophy";
 export { default as VerifiedCheck } from "./components/icons/VerifiedCheck";
 export { default as VerifiedStar } from "./components/icons/VerifiedStar";
 export { default as MoreVertical } from "./components/icons/MoreVertical";
+export { default as Mobile } from "./components/icons/Mobile";
 export { default as Android } from "./components/icons/Android";
 export { default as Apps } from "./components/icons/Apps";
 export { default as ArrowUp } from "./components/icons/ArrowUp";
