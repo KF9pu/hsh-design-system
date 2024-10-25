@@ -36,3 +36,5 @@ export { default as Folder } from "./components/icons/Folder";
 export { default as FolderJob } from "./components/icons/FolderJob";
 export { default as FolderStar } from "./components/icons/FolderStar";
 export { default as Heart } from "./components/icons/Heart";
+export { default as Home } from "./components/icons/Home";
+export { default as Like } from "./components/icons/Like";
