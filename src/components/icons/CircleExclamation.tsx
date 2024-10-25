@@ -43,7 +43,7 @@ const CircleCheck: React.FC<CircleCheckProps> = ({
       <path fillRule="evenodd" clipRule="evenodd" d={path1} fill={color} />
       {path2 && <path d={path2} fill={color} />}
       {path3 && (
-        <path fillRule="evenodd" clipRule="evenodd" d={path2} fill={color} />
+        <path fillRule="evenodd" clipRule="evenodd" d={path3} fill={color} />
       )}
     </svg>
   );
