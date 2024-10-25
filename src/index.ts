@@ -29,3 +29,4 @@ export { default as Document } from "./components/icons/Document";
 export { default as DocumentPerson } from "./components/icons/DocumentPerson";
 export { default as DocumentText } from "./components/icons/DocumentText";
 export { default as Eye } from "./components/icons/Eye";
+export { default as EyeSlash } from "./components/icons/EyeSlash";
