@@ -52,3 +52,4 @@ export { default as Persons } from "./components/icons/Persons";
 export { default as Pin } from "./components/icons/Pin";
 export { default as Plus } from "./components/icons/Plus";
 export { default as Search } from "./components/icons/Search";
+export { default as Send } from "./components/icons/Send";
