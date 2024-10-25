@@ -1,11 +1,11 @@
 import React from "react";
 
 interface MinusProps {
-  fill?: true;
+  thick?: true;
   color?: string;
 }
 
-const Minus: React.FC<MinusProps> = ({ fill = false, color = "#171719" }) => {
+const Minus: React.FC<MinusProps> = ({ thick = false, color = "#171719" }) => {
   return (
     <svg
       width="24"
@@ -14,7 +14,7 @@ const Minus: React.FC<MinusProps> = ({ fill = false, color = "#171719" }) => {
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
-      {fill ? (
+      {thick ? (
         <path
           d="M1.9502 12.0002C1.9502 11.2822 2.53222 10.7002 3.25019 10.7002H20.7502C21.4681 10.7002 22.0502 11.2822 22.0502 12.0002C22.0502 12.7182 21.4681 13.3002 20.7502 13.3002H3.25019C2.53222 13.3002 1.9502 12.7182 1.9502 12.0002Z"
           fill={color}
