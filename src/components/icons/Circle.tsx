@@ -17,6 +17,7 @@ const Circle: React.FC<CircleProps> = ({ fill = false, color = "#171719" }) => {
 
   const path = fill ? iconData.fill : iconData.outlined;
 
+  return (
     <svg
       width="24"
       height="24"
