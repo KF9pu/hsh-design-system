@@ -47,3 +47,4 @@ export { default as Message } from "./components/icons/Message";
 export { default as Minus } from "./components/icons/Minus";
 export { default as Pencil } from "./components/icons/Pencil";
 export { default as Person } from "./components/icons/Person";
+export { default as PersonPlus } from "./components/icons/PersonPlus";
