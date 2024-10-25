@@ -9,17 +9,6 @@ const XXX_Single: React.FC<XXX_SingleProps> = ({
   fill = false,
   color = "#171719",
 }) => {
-  const iconData = {
-    fill: `
-      
-    `,
-    outlined: `
-
-    `,
-  };
-
-  const path = fill ? iconData.fill : iconData.outlined;
-
   return (
     <svg
       width="24"
@@ -28,7 +17,7 @@ const XXX_Single: React.FC<XXX_SingleProps> = ({
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <path fillRule="evenodd" clipRule="evenodd" d={path} fill={color} />
+      {fill ? <></> : <></>}
     </svg>
   );
 };
