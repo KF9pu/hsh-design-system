@@ -35,3 +35,4 @@ export { default as Filter } from "./components/icons/Filter";
 export { default as Folder } from "./components/icons/Folder";
 export { default as FolderJob } from "./components/icons/FolderJob";
 export { default as FolderStar } from "./components/icons/FolderStar";
+export { default as Heart } from "./components/icons/Heart";
