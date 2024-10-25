@@ -38,3 +38,4 @@ export { default as FolderStar } from "./components/icons/FolderStar";
 export { default as Heart } from "./components/icons/Heart";
 export { default as Home } from "./components/icons/Home";
 export { default as Like } from "./components/icons/Like";
+export { default as LineHorizontal } from "./components/icons/LineHorizontal";
