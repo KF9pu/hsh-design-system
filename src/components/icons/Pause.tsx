@@ -15,8 +15,8 @@ const Pause: React.FC<PauseProps> = ({ color = "#171719", ...rest }) => {
       {...rest}
     >
       <path
-        fill-rule="evenodd"
-        clip-rule="evenodd"
+        fillRule="evenodd"
+        clipRule="evenodd"
         d="M10 5H6.5V19H10V5ZM17.5 5H14V19H17.5V5Z"
         fill={color}
       />

@@ -15,8 +15,8 @@ const Dot: React.FC<DotProps> = ({ color = "#171719", ...rest }) => {
       {...rest}
     >
       <path
-        fill-rule="evenodd"
-        clip-rule="evenodd"
+        fillRule="evenodd"
+        clipRule="evenodd"
         d="M18 12C18 15.312 15.312 18.0001 12 18.0001C8.688 18.0001 6 15.312 6 12C6 8.68801 8.688 6 12 6C15.312 6 18 8.68801 18 12Z"
         fill={color}
       />

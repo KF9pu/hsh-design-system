@@ -22,8 +22,8 @@ const Exclamation: React.FC<ExclamationProps> = ({
         fill={color}
       />
       <path
-        fill-rule="evenodd"
-        clip-rule="evenodd"
+        fillRule="evenodd"
+        clipRule="evenodd"
         d="M11.0998 15.4V4H12.8998V15.4H11.0998Z"
         fill={color}
       />
