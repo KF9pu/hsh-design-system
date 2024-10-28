@@ -9,6 +9,7 @@ interface TriangleExclamationProps
 const TriangleExclamation: React.FC<TriangleExclamationProps> = ({
   fill = false,
   color = "#171719",
+  ...rest
 }) => {
   return (
     <svg
@@ -17,6 +18,7 @@ const TriangleExclamation: React.FC<TriangleExclamationProps> = ({
       viewBox="0 0 24 24"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      {...rest}
     >
       {fill ? (
         <path
