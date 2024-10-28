@@ -1,10 +1,10 @@
-import React from "react";
+import React, { HtmlHTMLAttributes } from "react";
 
-interface IconListProps {
+interface IconListProps extends HtmlHTMLAttributes<HTMLOrSVGElement> {
   color?: string;
 }
 
-const IconList: React.FC<IconListProps> = ({ color = "#171719" }) => {
+const IconList: React.FC<IconListProps> = ({ color = "#171719", ...rest }) => {
   return (
     <svg
       width="24"
@@ -12,6 +12,7 @@ const IconList: React.FC<IconListProps> = ({ color = "#171719" }) => {
       viewBox="0 0 24 24"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      {...rest}
     >
       <path
         d="M3.4 4.6001C2.6268 4.6001 2 5.2269 2 6.0001C2 6.7733 2.6268 7.4001 3.4 7.4001C4.1732 7.4001 4.8 6.7733 4.8 6.0001C4.8 5.2269 4.1732 4.6001 3.4 4.6001Z"

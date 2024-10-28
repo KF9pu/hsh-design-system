@@ -1,10 +1,10 @@
-import React from "react";
+import React, { HtmlHTMLAttributes } from "react";
 
-interface CalendarProps {
+interface CalendarProps extends HtmlHTMLAttributes<HTMLOrSVGElement> {
   color?: string;
 }
 
-const Calendar: React.FC<CalendarProps> = ({ color = "#171719" }) => {
+const Calendar: React.FC<CalendarProps> = ({ color = "#171719", ...rest }) => {
   return (
     <svg
       width="24"
@@ -12,6 +12,7 @@ const Calendar: React.FC<CalendarProps> = ({ color = "#171719" }) => {
       viewBox="0 0 24 24"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      {...rest}
     >
       <path d="M17.9998 14H14.9998V17H17.9998V14Z" fill={color} />
       <path

@@ -1,10 +1,13 @@
-import React from "react";
+import React, { HtmlHTMLAttributes } from "react";
 
-interface ListCategoryProps {
+interface ListCategoryProps extends HtmlHTMLAttributes<HTMLOrSVGElement> {
   color?: string;
 }
 
-const ListCategory: React.FC<ListCategoryProps> = ({ color = "#171719" }) => {
+const ListCategory: React.FC<ListCategoryProps> = ({
+  color = "#171719",
+  ...rest
+}) => {
   return (
     <svg
       width="24"
@@ -12,6 +15,7 @@ const ListCategory: React.FC<ListCategoryProps> = ({ color = "#171719" }) => {
       viewBox="0 0 24 24"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      {...rest}
     >
       <path
         d="M3.125 6C3.125 5.51675 3.51675 5.125 4 5.125H20C20.4832 5.125 20.875 5.51675 20.875 6C20.875 6.48325 20.4832 6.875 20 6.875H4C3.51675 6.875 3.125 6.48325 3.125 6Z"

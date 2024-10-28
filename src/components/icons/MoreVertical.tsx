@@ -1,6 +1,6 @@
-import React from "react";
+import React, { HtmlHTMLAttributes } from "react";
 
-interface MoreVerticalProps {
+interface MoreVerticalProps extends HtmlHTMLAttributes<HTMLOrSVGElement> {
   tight?: true;
   color?: string;
 }
@@ -8,6 +8,7 @@ interface MoreVerticalProps {
 const MoreVertical: React.FC<MoreVerticalProps> = ({
   tight = false,
   color = "#171719",
+  ...rest
 }) => {
   return (
     <>
@@ -18,6 +19,7 @@ const MoreVertical: React.FC<MoreVerticalProps> = ({
           viewBox="0 0 12 24"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
+          {...rest}
         >
           <path
             d="M7.75 4.75C7.75 5.7165 6.9665 6.5 6 6.5C5.0335 6.5 4.25 5.7165 4.25 4.75C4.25 3.7835 5.0335 3 6 3C6.9665 3 7.75 3.7835 7.75 4.75Z"
@@ -39,6 +41,7 @@ const MoreVertical: React.FC<MoreVerticalProps> = ({
           viewBox="0 0 24 24"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
+          {...rest}
         >
           <path
             d="M13.75 4.75C13.75 5.7165 12.9665 6.5 12 6.5C11.0335 6.5 10.25 5.7165 10.25 4.75C10.25 3.7835 11.0335 3 12 3C12.9665 3 13.75 3.7835 13.75 4.75Z"

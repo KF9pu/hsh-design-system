@@ -1,11 +1,15 @@
-import React from "react";
+import React, { HtmlHTMLAttributes } from "react";
 
-interface CrownProps {
+interface CrownProps extends HtmlHTMLAttributes<HTMLOrSVGElement> {
   fill?: true;
   color?: string;
 }
 
-const Crown: React.FC<CrownProps> = ({ fill = false, color = "#171719" }) => {
+const Crown: React.FC<CrownProps> = ({
+  fill = false,
+  color = "#171719",
+  ...rest
+}) => {
   const iconData = {
     fill: {
       path1: `
@@ -34,6 +38,7 @@ const Crown: React.FC<CrownProps> = ({ fill = false, color = "#171719" }) => {
       viewBox="0 0 24 24"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      {...rest}
     >
       <path fillRule="evenodd" clipRule="evenodd" d={path1} fill={color} />
       {path2 ? (

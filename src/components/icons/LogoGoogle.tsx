@@ -1,6 +1,8 @@
-import React from "react";
+import React, { HtmlHTMLAttributes } from "react";
 
-const LogoGoogle: React.FC<unknown> = () => {
+const LogoGoogle: React.FC<HtmlHTMLAttributes<HTMLOrSVGElement>> = ({
+  ...rest
+}) => {
   return (
     <svg
       width="24"
@@ -8,6 +10,7 @@ const LogoGoogle: React.FC<unknown> = () => {
       viewBox="0 0 24 24"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      {...rest}
     >
       <path
         fill-rule="evenodd"

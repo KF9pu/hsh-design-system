@@ -1,10 +1,10 @@
-import React from "react";
+import React, { HtmlHTMLAttributes } from "react";
 
-interface FullProps {
+interface FullProps extends HtmlHTMLAttributes<HTMLOrSVGElement> {
   color?: string;
 }
 
-const Full: React.FC<FullProps> = ({ color = "#171719" }) => {
+const Full: React.FC<FullProps> = ({ color = "#171719", ...rest }) => {
   return (
     <svg
       width="24"
@@ -12,6 +12,7 @@ const Full: React.FC<FullProps> = ({ color = "#171719" }) => {
       viewBox="0 0 24 24"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      {...rest}
     >
       <path
         d="M13.3383 9.88965C13.0011 10.2549 13.0239 10.8243 13.3892 11.1614C13.7544 11.4986 14.3238 11.4758 14.6609 11.1106L19.0996 6.30198V10.0001C19.0996 10.4972 19.5026 10.9001 19.9996 10.9001C20.4967 10.9001 20.8996 10.4972 20.8996 10.0001V4.0001C20.8996 3.50304 20.4967 3.1001 19.9996 3.1001H14.4996C14.0026 3.1001 13.5996 3.50304 13.5996 4.0001C13.5996 4.49715 14.0026 4.9001 14.4996 4.9001L17.944 4.9001L13.3383 9.88965Z"

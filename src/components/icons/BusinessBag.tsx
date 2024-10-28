@@ -1,6 +1,6 @@
-import React from "react";
+import React, { HtmlHTMLAttributes } from "react";
 
-interface BusinessBagProps {
+interface BusinessBagProps extends HtmlHTMLAttributes<HTMLOrSVGElement> {
   fill?: true;
   color?: string;
 }
@@ -8,6 +8,7 @@ interface BusinessBagProps {
 const BusinessBag: React.FC<BusinessBagProps> = ({
   fill,
   color = "#171719",
+  ...rest
 }) => {
   const iconData = {
     filled: {
@@ -35,6 +36,7 @@ const BusinessBag: React.FC<BusinessBagProps> = ({
       viewBox="0 0 24 24"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      {...rest}
     >
       <path d={path1} fill={color} />
       {path2 && (

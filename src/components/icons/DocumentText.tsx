@@ -1,6 +1,6 @@
-import React from "react";
+import React, { HtmlHTMLAttributes } from "react";
 
-interface DocumentTextProps {
+interface DocumentTextProps extends HtmlHTMLAttributes<HTMLOrSVGElement> {
   fill?: true;
   color?: string;
 }
@@ -8,6 +8,7 @@ interface DocumentTextProps {
 const DocumentText: React.FC<DocumentTextProps> = ({
   fill = false,
   color = "#171719",
+  ...rest
 }) => {
   return (
     <svg
@@ -16,6 +17,7 @@ const DocumentText: React.FC<DocumentTextProps> = ({
       viewBox="0 0 24 24"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      {...rest}
     >
       {fill ? (
         <>

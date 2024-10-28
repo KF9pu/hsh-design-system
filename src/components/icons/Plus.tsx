@@ -1,11 +1,15 @@
-import React from "react";
+import React, { HtmlHTMLAttributes } from "react";
 
-interface PlusProps {
+interface PlusProps extends HtmlHTMLAttributes<HTMLOrSVGElement> {
   thick?: true;
   color?: string;
 }
 
-const Plus: React.FC<PlusProps> = ({ thick = false, color = "#171719" }) => {
+const Plus: React.FC<PlusProps> = ({
+  thick = false,
+  color = "#171719",
+  ...rest
+}) => {
   return (
     <svg
       width="24"
@@ -13,6 +17,7 @@ const Plus: React.FC<PlusProps> = ({ thick = false, color = "#171719" }) => {
       viewBox="0 0 24 24"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      {...rest}
     >
       {thick ? (
         <path

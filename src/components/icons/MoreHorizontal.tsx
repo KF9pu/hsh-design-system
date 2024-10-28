@@ -1,11 +1,12 @@
-import React from "react";
+import React, { HtmlHTMLAttributes } from "react";
 
-interface MoreHorizontalProps {
+interface MoreHorizontalProps extends HtmlHTMLAttributes<HTMLOrSVGElement> {
   color?: string;
 }
 
 const MoreHorizontal: React.FC<MoreHorizontalProps> = ({
   color = "#171719",
+  ...rest
 }) => {
   return (
     <svg
@@ -14,6 +15,7 @@ const MoreHorizontal: React.FC<MoreHorizontalProps> = ({
       viewBox="0 0 24 24"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      {...rest}
     >
       <path
         d="M19.25 13.75C18.2835 13.75 17.5 12.9665 17.5 12C17.5 11.0335 18.2835 10.25 19.25 10.25C20.2165 10.25 21 11.0335 21 12C21 12.9665 20.2165 13.75 19.25 13.75Z"

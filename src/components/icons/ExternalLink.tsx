@@ -1,10 +1,13 @@
-import React from "react";
+import React, { HtmlHTMLAttributes } from "react";
 
-interface ExternalLinkProps {
+interface ExternalLinkProps extends HtmlHTMLAttributes<HTMLOrSVGElement> {
   color?: string;
 }
 
-const ExternalLink: React.FC<ExternalLinkProps> = ({ color = "#171719" }) => {
+const ExternalLink: React.FC<ExternalLinkProps> = ({
+  color = "#171719",
+  ...rest
+}) => {
   return (
     <svg
       width="24"
@@ -12,6 +15,7 @@ const ExternalLink: React.FC<ExternalLinkProps> = ({ color = "#171719" }) => {
       viewBox="0 0 24 24"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      {...rest}
     >
       <path
         d="M14.4995 3.1001C14.0025 3.1001 13.5995 3.50304 13.5995 4.0001C13.5995 4.49716 14.0025 4.9001 14.4995 4.9001H17.8267L8.36314 14.3637C8.01167 14.7152 8.01167 15.285 8.36315 15.6365C8.71462 15.988 9.28447 15.988 9.63594 15.6365L19.0995 6.17289V9.5001C19.0995 9.99716 19.5025 10.4001 19.9995 10.4001C20.4966 10.4001 20.8995 9.99716 20.8995 9.5001V4.0001C20.8995 3.50304 20.4966 3.1001 19.9995 3.1001H14.4995Z"

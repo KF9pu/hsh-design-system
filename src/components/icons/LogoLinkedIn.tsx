@@ -1,6 +1,6 @@
-import React from "react";
+import React, { HtmlHTMLAttributes } from "react";
 
-interface LogoLinkedInProps {
+interface LogoLinkedInProps extends HtmlHTMLAttributes<HTMLOrSVGElement> {
   color?: string;
   real?: true;
 }
@@ -8,6 +8,7 @@ interface LogoLinkedInProps {
 const LogoLinkedIn: React.FC<LogoLinkedInProps> = ({
   color = "#171719",
   real,
+  ...rest
 }) => {
   return (
     <>
@@ -18,6 +19,7 @@ const LogoLinkedIn: React.FC<LogoLinkedInProps> = ({
           viewBox="0 0 24 24"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
+          {...rest}
         >
           <path
             fill-rule="evenodd"
@@ -39,6 +41,7 @@ const LogoLinkedIn: React.FC<LogoLinkedInProps> = ({
           viewBox="0 0 24 24"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
+          {...rest}
         >
           <path
             fill-rule="evenodd"

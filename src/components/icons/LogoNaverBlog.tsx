@@ -1,6 +1,6 @@
-import React from "react";
+import React, { HtmlHTMLAttributes } from "react";
 
-interface LogoNaverBlogProps {
+interface LogoNaverBlogProps extends HtmlHTMLAttributes<HTMLOrSVGElement> {
   color?: string;
   real?: true;
 }
@@ -8,6 +8,7 @@ interface LogoNaverBlogProps {
 const LogoNaverBlog: React.FC<LogoNaverBlogProps> = ({
   color = "#171719",
   real,
+  ...rest
 }) => {
   return (
     <>
@@ -18,6 +19,7 @@ const LogoNaverBlog: React.FC<LogoNaverBlogProps> = ({
           viewBox="0 0 24 24"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
+          {...rest}
         >
           <path
             d="M18.494 4.08008H5.50521C3.62421 4.08008 2.09961 5.60468 2.09961 7.48568V15.5443C2.09961 17.4253 3.62421 18.9499 5.50521 18.9499H10.0988L11.663 21.6526C11.8016 21.9001 12.1679 21.9001 12.3065 21.6526L13.8707 18.9499H18.494C20.375 18.9499 21.8996 17.4253 21.8996 15.5443V7.48568C21.8996 5.60468 20.375 4.08008 18.494 4.08008Z"
@@ -37,6 +39,7 @@ const LogoNaverBlog: React.FC<LogoNaverBlogProps> = ({
           viewBox="0 0 24 24"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
+          {...rest}
         >
           <path
             fill-rule="evenodd"

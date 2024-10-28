@@ -1,6 +1,6 @@
-import React from "react";
+import React, { HtmlHTMLAttributes } from "react";
 
-interface LogoYouTubeProps {
+interface LogoYouTubeProps extends HtmlHTMLAttributes<HTMLOrSVGElement> {
   color?: string;
   real?: true;
 }
@@ -8,6 +8,7 @@ interface LogoYouTubeProps {
 const LogoYouTube: React.FC<LogoYouTubeProps> = ({
   color = "#171719",
   real,
+  ...rest
 }) => {
   return (
     <>
@@ -18,6 +19,7 @@ const LogoYouTube: React.FC<LogoYouTubeProps> = ({
           viewBox="0 0 24 24"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
+          {...rest}
         >
           <path
             d="M22.2023 6.87727C21.9574 5.96137 21.2332 5.23717 20.3173 4.99222C18.6559 4.54492 11.9996 4.54492 11.9996 4.54492C11.9996 4.54492 5.34336 4.54492 3.68196 4.99222C2.76606 5.23717 2.04186 5.96137 1.79691 6.87727C1.34961 8.53867 1.34961 11.9999 1.34961 11.9999C1.34961 11.9999 1.34961 15.4612 1.79691 17.1226C2.04186 18.0385 2.76606 18.7627 3.68196 19.0076C5.34336 19.4549 11.9996 19.4549 11.9996 19.4549C11.9996 19.4549 18.6559 19.4549 20.3173 19.0076C21.2332 18.7627 21.9574 18.0385 22.2023 17.1226C22.6496 15.4612 22.6496 11.9999 22.6496 11.9999C22.6496 11.9999 22.6496 8.53867 22.2023 6.87727Z"
@@ -35,6 +37,7 @@ const LogoYouTube: React.FC<LogoYouTubeProps> = ({
           viewBox="0 0 24 24"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
+          {...rest}
         >
           <path
             fill-rule="evenodd"

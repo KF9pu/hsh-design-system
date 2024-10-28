@@ -1,6 +1,6 @@
-import React from "react";
+import React, { HtmlHTMLAttributes } from "react";
 
-interface LogoGooglePlayProps {
+interface LogoGooglePlayProps extends HtmlHTMLAttributes<HTMLOrSVGElement> {
   color?: string;
   real?: true;
 }
@@ -8,6 +8,7 @@ interface LogoGooglePlayProps {
 const LogoGooglePlay: React.FC<LogoGooglePlayProps> = ({
   color = "#171719",
   real,
+  ...rest
 }) => {
   return (
     <>
@@ -18,6 +19,7 @@ const LogoGooglePlay: React.FC<LogoGooglePlayProps> = ({
           viewBox="0 0 24 24"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
+          {...rest}
         >
           <path
             d="M11.9447 11.5748L4.07422 19.9256C4.31809 20.8346 5.14579 21.4997 6.12867 21.4997C6.52035 21.4997 6.88985 21.3962 7.20763 21.2041L7.2298 21.1893L16.0832 16.0827L11.9373 11.5674L11.9447 11.5748Z"
@@ -43,6 +45,7 @@ const LogoGooglePlay: React.FC<LogoGooglePlayProps> = ({
           viewBox="0 0 24 24"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
+          {...rest}
         >
           <path
             d="M15.7178 7.72438L7.22945 2.80299C6.91167 2.61085 6.53478 2.5 6.12832 2.5C5.29879 2.5 4.57981 2.97902 4.22903 3.67049L12.0034 11.4407L15.7178 7.72438Z"

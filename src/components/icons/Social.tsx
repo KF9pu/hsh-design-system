@@ -1,10 +1,10 @@
-import React from "react";
+import React, { HtmlHTMLAttributes } from "react";
 
-interface SocialProps {
+interface SocialProps extends HtmlHTMLAttributes<HTMLOrSVGElement> {
   color?: string;
 }
 
-const Social: React.FC<SocialProps> = ({ color = "#171719" }) => {
+const Social: React.FC<SocialProps> = ({ color = "#171719", ...rest }) => {
   return (
     <svg
       width="24"
@@ -12,6 +12,7 @@ const Social: React.FC<SocialProps> = ({ color = "#171719" }) => {
       viewBox="0 0 24 24"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      {...rest}
     >
       <path
         d="M19.1126 7.14028C19.1126 9.06769 17.5496 10.6302 15.6215 10.6302C13.6934 10.6302 12.1304 9.06769 12.1304 7.14028C12.1304 5.21287 13.6934 3.65039 15.6215 3.65039C17.5496 3.65039 19.1126 5.21287 19.1126 7.14028Z"

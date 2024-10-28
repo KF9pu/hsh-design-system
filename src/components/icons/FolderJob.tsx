@@ -1,6 +1,6 @@
-import React from "react";
+import React, { HtmlHTMLAttributes } from "react";
 
-interface FolderJobProps {
+interface FolderJobProps extends HtmlHTMLAttributes<HTMLOrSVGElement> {
   fill?: true;
   color?: string;
 }
@@ -8,6 +8,7 @@ interface FolderJobProps {
 const FolderJob: React.FC<FolderJobProps> = ({
   fill = false,
   color = "#171719",
+  ...rest
 }) => {
   return (
     <svg
@@ -16,6 +17,7 @@ const FolderJob: React.FC<FolderJobProps> = ({
       viewBox="0 0 24 24"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      {...rest}
     >
       {fill ? (
         <path

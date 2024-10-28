@@ -1,6 +1,6 @@
-import React from "react";
+import React, { HtmlHTMLAttributes } from "react";
 
-interface SearchProps {
+interface SearchProps extends HtmlHTMLAttributes<HTMLOrSVGElement> {
   thick?: true;
   color?: string;
 }
@@ -8,6 +8,7 @@ interface SearchProps {
 const Search: React.FC<SearchProps> = ({
   thick = false,
   color = "#171719",
+  ...rest
 }) => {
   return (
     <svg
@@ -16,6 +17,7 @@ const Search: React.FC<SearchProps> = ({
       viewBox="0 0 24 24"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      {...rest}
     >
       {thick ? (
         <path

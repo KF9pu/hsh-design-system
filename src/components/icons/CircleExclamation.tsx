@@ -1,6 +1,6 @@
-import React from "react";
+import React, { HtmlHTMLAttributes } from "react";
 
-interface CircleCheckProps {
+interface CircleCheckProps extends HtmlHTMLAttributes<HTMLOrSVGElement> {
   fill?: true;
   color?: string;
 }
@@ -8,6 +8,7 @@ interface CircleCheckProps {
 const CircleCheck: React.FC<CircleCheckProps> = ({
   fill,
   color = "#171719",
+  ...rest
 }) => {
   const iconData = {
     filled: {
@@ -39,6 +40,7 @@ const CircleCheck: React.FC<CircleCheckProps> = ({
       viewBox="0 0 24 24"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      {...rest}
     >
       <path fillRule="evenodd" clipRule="evenodd" d={path1} fill={color} />
       {path2 && <path d={path2} fill={color} />}

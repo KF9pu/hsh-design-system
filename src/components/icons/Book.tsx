@@ -1,11 +1,15 @@
-import React from "react";
+import React, { HtmlHTMLAttributes } from "react";
 
-interface BookProps {
+interface BookProps extends HtmlHTMLAttributes<HTMLOrSVGElement> {
   fill?: true;
   color?: string;
 }
 
-const Book: React.FC<BookProps> = ({ fill = false, color = "#171719" }) => {
+const Book: React.FC<BookProps> = ({
+  fill = false,
+  color = "#171719",
+  ...rest
+}) => {
   const iconData = {
     filled: {
       path1: `
@@ -31,6 +35,7 @@ const Book: React.FC<BookProps> = ({ fill = false, color = "#171719" }) => {
       viewBox="0 0 24 24"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      {...rest}
     >
       <path fillRule="evenodd" clipRule="evenodd" d={path1} fill={color} />
       {path2 && <path d={path2} fill={color} />}

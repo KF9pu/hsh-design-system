@@ -1,10 +1,13 @@
-import React from "react";
+import React, { HtmlHTMLAttributes } from "react";
 
-interface SquareLatinProps {
+interface SquareLatinProps extends HtmlHTMLAttributes<HTMLOrSVGElement> {
   color?: string;
 }
 
-const SquareLatin: React.FC<SquareLatinProps> = ({ color = "#171719" }) => {
+const SquareLatin: React.FC<SquareLatinProps> = ({
+  color = "#171719",
+  ...rest
+}) => {
   return (
     <svg
       width="24"
@@ -12,6 +15,7 @@ const SquareLatin: React.FC<SquareLatinProps> = ({ color = "#171719" }) => {
       viewBox="0 0 24 24"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      {...rest}
     >
       <path
         d="M9.65683 16.2501H7.9996L11.0398 7.7501H12.9474L15.9996 16.2501H14.3424L13.6211 14.1486H10.3722L9.65683 16.2501ZM10.7895 12.9158H13.2038L12.0294 9.48767H11.9579L10.7895 12.9158Z"

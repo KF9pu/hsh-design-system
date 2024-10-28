@@ -1,6 +1,6 @@
-import React from "react";
+import React, { HtmlHTMLAttributes } from "react";
 
-interface DocumentProps {
+interface DocumentProps extends HtmlHTMLAttributes<HTMLOrSVGElement> {
   fill?: true;
   color?: string;
 }
@@ -8,6 +8,7 @@ interface DocumentProps {
 const Document: React.FC<DocumentProps> = ({
   fill = false,
   color = "#171719",
+  ...rest
 }) => {
   const iconData = {
     fill: `
@@ -27,6 +28,7 @@ const Document: React.FC<DocumentProps> = ({
       viewBox="0 0 24 24"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      {...rest}
     >
       <path fillRule="evenodd" clipRule="evenodd" d={path} fill={color} />
       {fill ? (

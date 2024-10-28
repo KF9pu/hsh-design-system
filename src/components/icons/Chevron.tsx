@@ -1,6 +1,6 @@
-import React from "react";
+import React, { HtmlHTMLAttributes } from "react";
 
-interface ChevronProps {
+interface ChevronProps extends HtmlHTMLAttributes<HTMLOrSVGElement> {
   thick?: true;
   small?: true;
   color?: string;
@@ -16,6 +16,7 @@ const Chevron: React.FC<ChevronProps> = ({
   left = false,
   right = false,
   color = "#171719",
+  ...rest
 }) => {
   const getRotation = () => {
     if (up) return "180deg";
@@ -32,6 +33,7 @@ const Chevron: React.FC<ChevronProps> = ({
       viewBox="0 0 24 24"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      {...rest}
     >
       <path fillRule="evenodd" clipRule="evenodd" d={pathData} fill={color} />
     </svg>

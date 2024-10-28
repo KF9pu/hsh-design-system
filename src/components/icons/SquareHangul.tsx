@@ -1,10 +1,13 @@
-import React from "react";
+import React, { HtmlHTMLAttributes } from "react";
 
-interface SquareHangulProps {
+interface SquareHangulProps extends HtmlHTMLAttributes<HTMLOrSVGElement> {
   color?: string;
 }
 
-const SquareHangul: React.FC<SquareHangulProps> = ({ color = "#171719" }) => {
+const SquareHangul: React.FC<SquareHangulProps> = ({
+  color = "#171719",
+  ...rest
+}) => {
   return (
     <svg
       width="24"
@@ -12,6 +15,7 @@ const SquareHangul: React.FC<SquareHangulProps> = ({ color = "#171719" }) => {
       viewBox="0 0 24 24"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      {...rest}
     >
       <path
         d="M14.989 7.60982V10.2898H16.1496V11.43H14.989V14.2853H13.5845V7.60982H14.989ZM7.84961 9.59786V8.50639H9.80026V7.60007H11.2047V8.50639H13.1554V9.59786H7.84961ZM8.269 11.6054C8.26412 10.5626 9.19556 9.85611 10.5025 9.85124C11.8045 9.85611 12.7213 10.5626 12.7262 11.6054C12.7213 12.6433 11.8045 13.3352 10.5025 13.3303C9.19556 13.3352 8.26412 12.6433 8.269 11.6054ZM9.11753 16.4001V13.7688H10.522V15.2794H15.2816V16.4001H9.11753ZM9.63445 11.6054C9.63445 12.0537 9.98069 12.2729 10.5025 12.2778C11.0292 12.2729 11.3852 12.0537 11.39 11.6054C11.3852 11.1571 11.0292 10.9232 10.5025 10.9232C9.98069 10.9232 9.63445 11.1571 9.63445 11.6054Z"

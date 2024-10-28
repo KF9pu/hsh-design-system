@@ -1,6 +1,6 @@
 import React from "react";
 
-interface ButtonProps {
+interface ButtonProps extends HtmlHTMLAttributes<HTMLOrSVGElement> {
   label: string;
   size: "normal" | "small";
   onClick: () => void;

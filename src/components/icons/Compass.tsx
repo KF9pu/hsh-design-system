@@ -1,6 +1,6 @@
-import React from "react";
+import React, { HtmlHTMLAttributes } from "react";
 
-interface CompassProps {
+interface CompassProps extends HtmlHTMLAttributes<HTMLOrSVGElement> {
   fill?: true;
   color?: string;
 }
@@ -8,6 +8,7 @@ interface CompassProps {
 const Compass: React.FC<CompassProps> = ({
   fill = false,
   color = "#171719",
+  ...rest
 }) => {
   const iconData = {
     fill: {
@@ -35,6 +36,7 @@ const Compass: React.FC<CompassProps> = ({
       viewBox="0 0 24 24"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      {...rest}
     >
       <path fillRule="evenodd" clipRule="evenodd" d={path1} fill={color} />
       {path2 ? (

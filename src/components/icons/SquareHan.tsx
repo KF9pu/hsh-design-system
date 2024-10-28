@@ -1,10 +1,13 @@
-import React from "react";
+import React, { HtmlHTMLAttributes } from "react";
 
-interface SquareHanProps {
+interface SquareHanProps extends HtmlHTMLAttributes<HTMLOrSVGElement> {
   color?: string;
 }
 
-const SquareHan: React.FC<SquareHanProps> = ({ color = "#171719" }) => {
+const SquareHan: React.FC<SquareHanProps> = ({
+  color = "#171719",
+  ...rest
+}) => {
   return (
     <svg
       width="24"
@@ -12,6 +15,7 @@ const SquareHan: React.FC<SquareHanProps> = ({ color = "#171719" }) => {
       viewBox="0 0 24 24"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      {...rest}
     >
       <path
         d="M16.286 8.97568V10.2647H14.9656C14.485 11.5733 13.8394 12.672 13.0287 13.5851C13.9656 14.2735 15.1161 14.7911 16.4996 15.0987C16.1792 15.4063 15.7423 16.0509 15.519 16.4269C14.0481 16.046 12.8637 15.4503 11.9025 14.6495C10.8977 15.4405 9.7132 16.0313 8.33456 16.4562C8.17436 16.129 7.74718 15.4845 7.49961 15.1671C8.83941 14.8253 9.97048 14.3272 10.8928 13.6485C10.1064 12.711 9.50446 11.5831 9.01902 10.2647H7.69378V8.97568H11.2666V7.54014H12.6355V8.97568H16.286ZM10.485 10.2647C10.8491 11.1632 11.3443 11.964 11.985 12.6524C12.5773 11.9884 13.0481 11.1974 13.4025 10.2647H10.485Z"

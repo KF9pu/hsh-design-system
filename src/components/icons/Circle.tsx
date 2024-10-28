@@ -1,11 +1,15 @@
-import React from "react";
+import React, { HtmlHTMLAttributes } from "react";
 
-interface CircleProps {
+interface CircleProps extends HtmlHTMLAttributes<HTMLOrSVGElement> {
   fill?: true;
   color?: string;
 }
 
-const Circle: React.FC<CircleProps> = ({ fill = false, color = "#171719" }) => {
+const Circle: React.FC<CircleProps> = ({
+  fill = false,
+  color = "#171719",
+  ...rest
+}) => {
   const iconData = {
     fill: `
       M2.09961 12.0001C2.09961 6.53248 6.53199 2.1001 11.9996 2.1001C17.4672 2.1001 21.8996 6.53248 21.8996 12.0001C21.8996 17.4677 17.4672 21.9001 11.9996 21.9001C6.53199 21.9001 2.09961 17.4677 2.09961 12.0001Z
@@ -24,6 +28,7 @@ const Circle: React.FC<CircleProps> = ({ fill = false, color = "#171719" }) => {
       viewBox="0 0 24 24"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      {...rest}
     >
       <path fillRule="evenodd" clipRule="evenodd" d={path} fill={color} />
     </svg>
