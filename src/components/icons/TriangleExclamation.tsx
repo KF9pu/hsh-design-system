@@ -1,6 +1,7 @@
-import React from "react";
+import React, { HtmlHTMLAttributes } from "react";
 
-interface TriangleExclamationProps {
+interface TriangleExclamationProps
+  extends HtmlHTMLAttributes<HTMLOrSVGElement> {
   fill?: true;
   color?: string;
 }
