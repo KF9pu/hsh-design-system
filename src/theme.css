@@ -203,8 +203,8 @@
   --background-normal-alternative: var(--coolNeutral-99);
   --background-elevated-normal: var(--common-100);
   --background-elevated-alternative: var(--coolNeutral-99);
-  --Interaction-inactive: var(--coolNeutral-70);
-  --Interaction-disable: var(--coolNeutral-98);
+  --interaction-inactive: var(--coolNeutral-70);
+  --interaction-disable: var(--coolNeutral-98);
   --line-normal: rgba(112, 115, 124, 0.22);
   --line-neutral: rgba(112, 115, 124, 0.16);
   --line-alternative: rgba(112, 115, 124, 0.08);
