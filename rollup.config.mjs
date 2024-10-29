@@ -25,7 +25,9 @@ export default {
     resolve(),
     commonjs(),
     typescript(),
-    postcss(),
+    postcss({
+      extract: path.resolve("dist/theme.css"),
+    }),
   ],
   external: ["react", "react-dom"], // 외부 의존성 제외
 };
