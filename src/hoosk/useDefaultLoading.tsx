@@ -1,8 +1,6 @@
 import { useEffect, useState } from "react";
-interface DefaultLoadingProps {
-  time?: number;
-}
-const useDefaultLoading = ({ time = 500 }: DefaultLoadingProps) => {
+
+const useDefaultLoading = (time: number = 500) => {
   const [isLoading, setIsLoading] = useState(true);
   const delayStages = [500, 1000, 1500]; // 각 지연 시간을 설정 (단위: ms)
   const [delaysPassed, setDelaysPassed] = useState(
