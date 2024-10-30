@@ -187,12 +187,32 @@
   --pink-20: #730560;
   --pink-10: #3d0133;
 
+  /* 2025 올해의 색상 */
+  --FutureDusk-normal-2025: #6e4c7f;
+  --FutureDusk-strong-2025: #634275;
+  --FutureDusk-heavy: #523665;
+  --CinnamonSlate-normal-2025: #5d423f;
+  --CinnamonSlate-strong-2025: #4f3937;
+  --CinnamonSlate-heavy-2025: #3f2f2d;
+  --Rumors-normal-2025: #a52a2a;
+  --Rumors-strong-2025: #8f2626;
+  --Rumors-heavy-2025: #7a2020;
+  --Capsule-normal-2025: #d3bdae;
+  --Capsule-strong-2025: #bfa693;
+  --Capsule-heavy-2025: #a38d7d;
+  --PurpleBasil-normal-2025: #4c3f54;
+  --PurpleBasil-strong-2025: #44374b;
+  --PurpleBasil-heavy-2025: #3a2f42;
+  --Encore-normal-2025: #375e7d;
+  --Encore-strong-2025: #2e506a;
+  --Encore-heavy-2025: #263f56;
+
   /* light */
   --static-white: var(--common-100);
   --static-black: var(--common-0);
-  --primary-normal: var(--blue-50);
-  --primary-strong: var(--blue-45);
-  --primary-hreavy: var(--blue-40);
+  --primary-normal: var(--FutureDusk-normal);
+  --primary-strong: var(--FutureDusk-strong);
+  --primary-heavy: var(--FutureDusk-heavy);
   --label-normal: var(--coolNeutral-10);
   --label-string: var(--common-0);
   --label-neutral: rgba(46, 47, 51, 0.88);
@@ -234,7 +254,7 @@
   --static-black-dark: var(--common-0);
   --primary-normal-dark: var(--blue-60);
   --primary-strong-dark: var(--blue-55);
-  --primary-hreavy-dark: var(--blue-50);
+  --primary-heavy-dark: var(--blue-50);
   --label-normal-dark: var(--coolNeutral-99);
   --label-string-dark: var(--common-100);
   --label-neutral-dark: rgba(194, 196, 200, 0.88);
