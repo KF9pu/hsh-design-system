@@ -1,15 +1,38 @@
 import { useEffect, useState } from "react";
-
-const useDefaultLoading = () => {
+interface DefaultLoadingProps {
+  time?: number;
+}
+const useDefaultLoading = ({ time = 500 }: DefaultLoadingProps) => {
   const [isLoading, setIsLoading] = useState(true);
+  const delayStages = [500, 1000, 1500]; // 각 지연 시간을 설정 (단위: ms)
+  const [delaysPassed, setDelaysPassed] = useState(
+    Array(delayStages.length).fill(false)
+  );
 
   useEffect(() => {
-    const timer = setTimeout(() => {
+    const loadingTimer = setTimeout(() => {
       setIsLoading(false);
-    }, 500); // 0.5초 딜레이
+    }, time); // 첫 번째 0.5초 딜레이
 
-    return () => clearTimeout(timer); // 컴포넌트가 언마운트될 때 타이머 제거
+    return () => clearTimeout(loadingTimer);
   }, []);
-  return { isLoading };
+
+  useEffect(() => {
+    if (!isLoading) {
+      // 각 딜레이 단계에 대해 타이머 설정
+      delayStages.forEach((delay, index) => {
+        const timer = setTimeout(() => {
+          setDelaysPassed((prev) => {
+            const updatedDelays = [...prev];
+            updatedDelays[index] = true;
+            return updatedDelays;
+          });
+        }, delay);
+
+        return () => clearTimeout(timer);
+      });
+    }
+  }, [isLoading]);
+  return { isLoading, delaysPassed };
 };
 export default useDefaultLoading;
