@@ -1,4 +1,6 @@
 import "./theme.css";
+export { default as useDefaultLoading } from "./hoosk/useDefaultLoading";
+export { default as useMediaQuery } from "./hoosk/useMediaQuery";
 export { default as ChevronDouble } from "./components/icons/ChevronDouble";
 export { default as Chevron } from "./components/icons/Chevron";
 export { default as ChevronTight } from "./components/icons/ChevronTight";
