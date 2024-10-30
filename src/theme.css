@@ -210,9 +210,9 @@
   /* light */
   --static-white: var(--common-100);
   --static-black: var(--common-0);
-  --primary-normal: var(--FutureDusk-normal);
-  --primary-strong: var(--FutureDusk-strong);
-  --primary-heavy: var(--FutureDusk-heavy);
+  --primary-normal: var(--FutureDusk-normal-2025);
+  --primary-strong: var(--FutureDusk-strong-2025);
+  --primary-heavy: var(--FutureDusk-heavy-2025);
   --label-normal: var(--coolNeutral-10);
   --label-string: var(--common-0);
   --label-neutral: rgba(46, 47, 51, 0.88);
