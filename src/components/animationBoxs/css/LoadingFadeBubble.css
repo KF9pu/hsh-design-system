@@ -1,5 +1,3 @@
-@import "../../../theme.css";
-
 .clipShrink1 {
   animation: clipShrink1 1s ease-in-out forwards;
 }
