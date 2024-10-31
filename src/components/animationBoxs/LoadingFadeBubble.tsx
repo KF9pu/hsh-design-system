@@ -4,6 +4,7 @@ import useDefaultLoading from "../../hooks/useDefaultLoading";
 import "../../theme.css";
 
 interface LoadingFadeBubbleProps {
+  maionColor?: string;
   FadeBubbleColor1?: string;
   FadeBubbleColor2?: string;
   FadeBubbleColor3?: string;
@@ -11,6 +12,7 @@ interface LoadingFadeBubbleProps {
 }
 
 const LoadingFadeBubble: FC<LoadingFadeBubbleProps> = ({
+  maionColor = "white",
   FadeBubbleColor1 = "#007bff",
   FadeBubbleColor2 = "rgba(173, 255, 47, 0.9)",
   FadeBubbleColor3 = "rgba(70, 130, 180, 0.9)",
@@ -19,7 +21,10 @@ const LoadingFadeBubble: FC<LoadingFadeBubbleProps> = ({
   const { isLoading } = useDefaultLoading(1500);
 
   return (
-    <main className={`loading-container ${isLoading ? "" : "hidden"}`}>
+    <main
+      className={`loading-container ${isLoading ? "" : "hidden"}`}
+      style={{ backgroundColor: maionColor }}
+    >
       <FadeBubble
         className="fade-bubble fade-bubble-primary"
         style={{ backgroundColor: FadeBubbleColor1 }}
