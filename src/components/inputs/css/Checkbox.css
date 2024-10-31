@@ -1,0 +1,141 @@
+@import "../../../theme.css";
+
+/* 공통 스타일 */
+.checkbox-wrapper {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+  height: fit-content;
+  padding: 8px;
+  border-radius: 9999px;
+  transition: all;
+  transition-duration: 500ms;
+  user-select: none;
+
+  &:has(input:hover) {
+    background-color: rgba(23, 23, 25, 0.05);
+  }
+  &:has(input:focus) {
+    background-color: rgba(23, 23, 25, 0.08);
+  }
+  &:has(.checkbox.large) {
+    padding: 12px;
+  }
+  &:has(.checkbox.round) {
+    padding: 4px;
+  }
+  &:has(.checkbox.round.normal) {
+    padding: 6px;
+  }
+  &:has(.checkbox.round.large) {
+    padding: 8px;
+  }
+  &:has(.checkbox.check) {
+    padding: 4px;
+  }
+}
+
+.checkbox-wrapper.pressed {
+  background-color: rgba(23, 23, 25, 0.12) !important;
+}
+
+.checkbox-wrapper input[type="checkbox"] {
+  position: absolute;
+  cursor: pointer;
+  opacity: 0;
+}
+.checkbox-wrapper input[type="checkbox"].small {
+  width: 20px;
+  height: 20px;
+}
+
+.checkbox-wrapper input[type="checkbox"].normal {
+  width: 24px;
+  height: 24px;
+}
+
+.checkbox-wrapper input[type="checkbox"].large {
+  width: 32px;
+  height: 32px;
+}
+
+.checkbox {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #ccc;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* 크기 */
+
+.checkbox.large {
+  width: 32px;
+  height: 32px;
+}
+.checkbox.normal {
+  width: 24px;
+  height: 24px;
+}
+
+.checkbox.small {
+  width: 16px;
+  height: 16px;
+}
+
+/* 타입별 모양 */
+.checkbox.square {
+  border-radius: 4px;
+}
+
+.checkbox.round,
+.checkbox.check {
+  border-radius: 50%;
+}
+
+.checkbox.check {
+  border: none;
+}
+
+/* 상태 스타일 */
+.checkbox.checked,
+.checkbox.partial {
+  --color: #007bff;
+  border-color: var(--color);
+  background-color: var(--color);
+  color: white;
+}
+.checkbox.check.checked,
+.checkbox.check.partial {
+  border: none;
+  background-color: transparent;
+}
+
+.checkbox.unchecked {
+  background-color: white;
+  color: #007bff;
+}
+.checkbox.check.unchecked {
+  background-color: transparent;
+  color: #007bff;
+}
+
+/* 체크 표시 */
+.checkbox.check.checked .checkmark {
+  font-size: 14px;
+  color: white;
+}
+
+/* 비활성화 상태 */
+.checkbox.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* 상호작용 스타일 */
+.checkbox.normal {
+  /* 기본 상태로 별도 스타일 없음 */
+}

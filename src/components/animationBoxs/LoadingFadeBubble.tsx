@@ -1,7 +1,7 @@
 import React from "react";
 import type { FC, HtmlHTMLAttributes, ReactNode } from "react";
 import useDefaultLoading from "../../hooks/useDefaultLoading";
-import "../../theme.css";
+import "./css/LoadingFadeBubble.css";
 
 interface LoadingFadeBubbleProps {
   mainColor?: string;

@@ -1,0 +1,61 @@
+@import "../../../theme.css";
+
+.clipShrink1 {
+  animation: clipShrink1 1s ease-in-out forwards;
+}
+
+.clipShrink2 {
+  animation: clipShrink2 1.5s ease-in-out forwards;
+}
+
+.clipShrink3 {
+  animation: clipShrink3 1.6s ease-in-out forwards;
+}
+
+.clipShrink4 {
+  animation: clipShrink4 1.1s ease-in-out forwards;
+}
+
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  z-index: 100;
+  width: 100vw;
+  height: 100vh;
+  border: 1px solid; /* Define color or use a specific style if needed */
+  transition: all 0.5s ease;
+}
+
+.loading-container.hidden {
+  transform: translateY(-100vh);
+  opacity: 0;
+}
+
+.fade-bubble {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  font-size: 48px;
+}
+
+.fade-bubble-primary {
+  animation: clipShrink1 1s ease-in-out forwards;
+}
+
+.fade-bubble-lime {
+  animation: clipShrink2 1.5s ease-in-out forwards;
+}
+
+.fade-bubble-blue {
+  animation: clipShrink3 1.6s ease-in-out forwards;
+}
+
+.fade-bubble-sky {
+  animation: clipShrink4 1.1s ease-in-out forwards;
+}

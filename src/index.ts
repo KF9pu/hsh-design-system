@@ -1,6 +1,7 @@
 import "./theme.css";
 export { default as useDefaultLoading } from "./hooks/useDefaultLoading";
 export { default as useMediaQuery } from "./hooks/useMediaQuery";
+export { default as Checkbox } from "./components/inputs/CheckBox";
 export { default as LoadingFadeBubble } from "./components/animationBoxs/LoadingFadeBubble";
 export { default as ChevronDouble } from "./components/icons/ChevronDouble";
 export { default as Chevron } from "./components/icons/Chevron";
