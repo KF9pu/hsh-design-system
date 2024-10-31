@@ -363,12 +363,7 @@
   width: 100vw;
   height: 100vh;
   border: 1px solid; /* Define color or use a specific style if needed */
-  background-color: rgba(
-    240,
-    240,
-    240,
-    0.95
-  ); /* Equivalent to bg-common-100 bg-opacity-90 */
+  background-color: white;
   transition: all 0.5s ease;
 }
 
