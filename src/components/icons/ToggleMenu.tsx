@@ -1,5 +1,5 @@
 import React, { HtmlHTMLAttributes } from "react";
-import "./toggleMenu.css";
+import "./css/toggleMenu.css";
 
 interface ToggleMenuProps extends HtmlHTMLAttributes<HTMLDivElement> {
   isOpen: boolean;
