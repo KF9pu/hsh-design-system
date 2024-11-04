@@ -1,0 +1,34 @@
+.menu-icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 35px;
+  height: 25px;
+  cursor: pointer;
+}
+
+.line {
+  width: 100%;
+  height: 5px;
+  background-color: black;
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.line1,
+.line3 {
+  transform-origin: 10%;
+}
+
+/* Rotate and scale lines when open */
+.menu-icon.open .line1 {
+  transform: rotate(45deg);
+}
+
+.menu-icon.open .line2 {
+  transform: scaleY(0);
+}
+
+.menu-icon.open .line3 {
+  transform: rotate(-45deg);
+}

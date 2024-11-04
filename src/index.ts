@@ -4,6 +4,7 @@ export { default as useMediaQuery } from "./hooks/useMediaQuery";
 export { default as Checkbox } from "./components/inputs/CheckBox";
 export * from "./components/inputs/CheckBox";
 export { default as LoadingFadeBubble } from "./components/animationBoxs/LoadingFadeBubble";
+export { default as ToggleMenu } from "./components/icons/ToggleMenu";
 export { default as ChevronDouble } from "./components/icons/ChevronDouble";
 export { default as Chevron } from "./components/icons/Chevron";
 export { default as ChevronTight } from "./components/icons/ChevronTight";
