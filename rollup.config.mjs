@@ -4,6 +4,7 @@ import typescript from "rollup-plugin-typescript2";
 import postcss from "rollup-plugin-postcss";
 import del from "rollup-plugin-delete";
 import path from "path";
+import url from "@rollup/plugin-url";
 
 export default {
   input: "src/index.ts", // 모듈의 진입점
