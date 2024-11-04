@@ -29,6 +29,12 @@ export default {
     postcss({
       extract: path.resolve("dist/theme.css"),
     }),
+    url({
+      include: ["**/*.ttf"],
+      limit: 0, // 0으로 설정하면 폰트를 별도의 파일로 출력합니다.
+      emitFiles: true,
+      fileName: "assets/fonts/[name][extname]",
+    }),
   ],
   external: ["react", "react-dom"], // 외부 의존성 제외
 };
