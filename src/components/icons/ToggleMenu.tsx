@@ -7,7 +7,6 @@ interface ToggleMenuProps extends HtmlHTMLAttributes<HTMLDivElement> {
 
 const ToggleMenu: React.FC<ToggleMenuProps> = ({
   isOpen,
-  onClick,
   className,
   ...rest
 }) => {
