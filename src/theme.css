@@ -1,18 +1,18 @@
 @font-face {
   font-family: "DNFBit";
-  src: url("../fonts/DNFBitBitv2.ttf");
+  src: url("../fonts/DNFBitBitv2.ttf") format("truetype");
 }
 @font-face {
   font-family: "DNFBladeBold";
-  src: url("../fonts/DNFForgedBlade-Bold.ttf");
+  src: url("../fonts/DNFForgedBlade-Bold.ttf") format("truetype");
 }
 @font-face {
   font-family: "DNFBladeLight";
-  src: url("../fonts/DNFForgedBlade-Light.ttf");
+  src: url("../fonts/DNFForgedBlade-Light.ttf") format("truetype");
 }
 @font-face {
   font-family: "DNFBladeMedium";
-  src: url("../fonts/DNFForgedBlade-Medium.ttf");
+  src: url("../fonts/DNFForgedBlade-Medium.ttf") format("truetype");
 }
 
 :root {
