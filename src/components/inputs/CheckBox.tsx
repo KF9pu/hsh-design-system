@@ -29,6 +29,7 @@ export enum CheckboxInteraction {
 interface CheckboxProps extends HtmlHTMLAttributes<HTMLDivElement> {
   type?: CheckboxType;
   size?: CheckboxSize;
+  isChecked?: CheckboxState;
   disabled?: boolean;
   CheckBoxRef: React.MutableRefObject<HTMLInputElement | null>;
 }
@@ -36,8 +37,10 @@ interface CheckboxProps extends HtmlHTMLAttributes<HTMLDivElement> {
 const Checkbox: React.FC<CheckboxProps> = ({
   type = CheckboxType.Square,
   size = CheckboxSize.Normal,
+  isChecked = CheckboxState.Unchecked,
   CheckBoxRef,
   disabled = false,
+  onClick,
   ...rest
 }) => {
   const [Interaction, setInteraction] = useState<CheckboxInteraction>(
@@ -87,6 +90,7 @@ const Checkbox: React.FC<CheckboxProps> = ({
         ref={CheckBoxRef}
         type="checkbox"
         className={`${size}`}
+        onClick={onClick}
         onChange={(e) =>
           !disabled &&
           setState(

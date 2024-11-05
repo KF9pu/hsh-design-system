@@ -18,22 +18,22 @@
     background-color: rgba(23, 23, 25, 0.08);
   }
 }
-.radio-wrapper input[type="checkbox"] {
+.radio-wrapper input[type="radio"] {
   position: absolute;
   cursor: pointer;
   opacity: 0;
 }
-.radio-wrapper input[type="checkbox"].small {
+.radio-wrapper input[type="radio"].small {
   width: 20px;
   height: 20px;
 }
 
-.radio-wrapper input[type="checkbox"].normal {
+.radio-wrapper input[type="radio"].normal {
   width: 24px;
   height: 24px;
 }
 
-.radio-wrapper input[type="checkbox"].large {
+.radio-wrapper input[type="radio"].large {
   width: 32px;
   height: 32px;
 }

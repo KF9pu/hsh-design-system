@@ -1,0 +1,48 @@
+.switch-wrapper {
+  background-color: rgba(112, 115, 124, 0.16);
+  border-radius: 9999px;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: all;
+  transition-duration: 500ms;
+  user-select: none;
+}
+.switch-wrapper.checked {
+  background-color: #007bff;
+}
+.switch-wrapper.small {
+  width: 40px;
+  height: 20px;
+}
+.switch-wrapper.normal {
+  width: 56px;
+  height: 32px;
+}
+.switch {
+  position: relative;
+  background-color: white;
+  border-radius: 9999px;
+  transition: all 0.2s ease;
+}
+.switch.checked.small {
+  transform: translateX(calc(100%));
+}
+.switch.checked.normal {
+  transform: translateX(calc(100%));
+}
+.switch.small {
+  height: 16px;
+  width: 16px;
+}
+.switch.normal {
+  height: 24px;
+  width: 24px;
+}
+
+.switch input[type="checkbox"] {
+  position: absolute;
+  cursor: pointer;
+  opacity: 0;
+}

@@ -17,12 +17,14 @@ export enum RadioInteraction {
 }
 interface RadioProps extends HtmlHTMLAttributes<HTMLDivElement> {
   size?: RadioSize;
+  isChecked?: RadioState;
   disabled?: boolean;
   RadioRef: React.MutableRefObject<HTMLInputElement | null>;
 }
 
 const Radio: React.FC<RadioProps> = ({
   size = RadioSize.Normal,
+  isChecked = RadioState.Unchecked,
   disabled,
   RadioRef,
   ...rest
@@ -30,7 +32,7 @@ const Radio: React.FC<RadioProps> = ({
   const [Interaction, setInteraction] = useState<RadioInteraction>(
     RadioInteraction.Normal
   );
-  const [State, setState] = useState<RadioState>(RadioState.Unchecked);
+  const [State, setState] = useState<RadioState>(isChecked);
 
   return (
     <div className={`radio-wrapper ${Interaction}`} {...rest}>
@@ -44,7 +46,7 @@ const Radio: React.FC<RadioProps> = ({
       </div>
       <input
         ref={RadioRef}
-        type="checkbox"
+        type="radio"
         className={`${size}`}
         onChange={(e) =>
           !disabled &&
