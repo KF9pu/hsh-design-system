@@ -88,6 +88,7 @@ const Checkbox: React.FC<CheckboxProps> = ({
         type="checkbox"
         className={`${size}`}
         onChange={(e) =>
+          !disabled &&
           setState(
             e.target.checked ? CheckboxState.Checked : CheckboxState.Unchecked
           )
@@ -95,8 +96,12 @@ const Checkbox: React.FC<CheckboxProps> = ({
         onMouseDown={() =>
           !disabled && setInteraction(CheckboxInteraction.Pressed)
         }
-        onMouseUp={() => setInteraction(CheckboxInteraction.Normal)}
-        onMouseLeave={() => setInteraction(CheckboxInteraction.Normal)}
+        onMouseUp={() =>
+          !disabled && setInteraction(CheckboxInteraction.Normal)
+        }
+        onMouseLeave={() =>
+          !disabled && setInteraction(CheckboxInteraction.Normal)
+        }
       />
     </div>
   );
