@@ -39,12 +39,14 @@ const Switch: React.FC<SwitchProps> = ({
     <div
       className={`switch-wrapper ${size} ${State} ${className ?? ""}`}
       onClick={(event: React.MouseEvent<HTMLDivElement>) => {
-        setState((prev) =>
-          prev == SwitchState.Unchecked
-            ? SwitchState.Checked
-            : SwitchState.Unchecked
-        );
-        onClick?.(event);
+        if (!disabled) {
+          setState((prev) =>
+            prev == SwitchState.Unchecked
+              ? SwitchState.Checked
+              : SwitchState.Unchecked
+          );
+          onClick?.(event);
+        }
       }}
     >
       <div className={`switch ${size} ${State}`} {...rest}>

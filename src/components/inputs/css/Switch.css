@@ -9,6 +9,12 @@
   transition-duration: 500ms;
   user-select: none;
 }
+/* 비활성화 상태 */
+.switch-wrapper.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
 .switch-wrapper.checked {
   background-color: #007bff;
 }
