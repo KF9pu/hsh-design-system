@@ -51,7 +51,10 @@ const Switch: React.FC<SwitchProps> = ({
         }
       }}
     >
-      <div className={`switch ${size} ${State}`} {...rest}>
+      <div
+        className={`switch ${size} ${State} ${disabled ? "disabled" : ""}`}
+        {...rest}
+      >
         <input disabled={disabled} type="checkbox" ref={SwitchRef} />
       </div>
     </div>

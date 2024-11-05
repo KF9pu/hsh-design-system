@@ -51,3 +51,6 @@
   position: absolute;
   opacity: 0;
 }
+.switch.disabled input[type="checkbox"] {
+  cursor: not-allowed;
+}
