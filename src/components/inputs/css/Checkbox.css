@@ -69,7 +69,6 @@
 }
 
 /* 크기 */
-
 .checkbox.large {
   width: 32px;
   height: 32px;
@@ -119,12 +118,6 @@
 .checkbox.check.unchecked {
   background-color: transparent;
   color: #007bff;
-}
-
-/* 체크 표시 */
-.checkbox.check.checked .checkmark {
-  font-size: 14px;
-  color: white;
 }
 
 /* 비활성화 상태 */

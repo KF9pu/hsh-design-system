@@ -1,0 +1,92 @@
+.radio-wrapper {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+  height: fit-content;
+  padding: 8px;
+  border-radius: 9999px;
+  transition: all;
+  transition-duration: 500ms;
+  user-select: none;
+
+  &:has(input:hover) {
+    background-color: rgba(23, 23, 25, 0.05);
+  }
+  &:has(input:focus) {
+    background-color: rgba(23, 23, 25, 0.08);
+  }
+}
+.radio-wrapper input[type="checkbox"] {
+  position: absolute;
+  cursor: pointer;
+  opacity: 0;
+}
+.radio-wrapper input[type="checkbox"].small {
+  width: 20px;
+  height: 20px;
+}
+
+.radio-wrapper input[type="checkbox"].normal {
+  width: 24px;
+  height: 24px;
+}
+
+.radio-wrapper input[type="checkbox"].large {
+  width: 32px;
+  height: 32px;
+}
+
+.radio {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #ccc;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border-radius: 9999px;
+  background-color: white;
+}
+
+.radio-wrapper.pressed {
+  background-color: rgba(23, 23, 25, 0.12) !important;
+}
+
+/* 크기 */
+.radio.large {
+  width: 32px;
+  height: 32px;
+}
+.radio.normal {
+  width: 24px;
+  height: 24px;
+}
+
+.radio.small {
+  width: 16px;
+  height: 16px;
+}
+
+.radio.checked {
+  --color: #007bff;
+  border-color: var(--color);
+  background-color: var(--color);
+}
+
+.center_dot {
+  width: 12px;
+  height: 12px;
+  background-color: white;
+  border-radius: 9999px;
+}
+
+.center_dot.small {
+  width: 10px;
+  height: 10px;
+}
+/* 비활성화 상태 */
+.radio.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
