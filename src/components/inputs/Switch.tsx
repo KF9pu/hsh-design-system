@@ -37,7 +37,9 @@ const Switch: React.FC<SwitchProps> = ({
 
   return (
     <div
-      className={`switch-wrapper ${size} ${State} ${className ?? ""}`}
+      className={`switch-wrapper ${size} ${State} ${
+        disabled ? "disabled" : ""
+      } ${className ?? ""}`}
       onClick={(event: React.MouseEvent<HTMLDivElement>) => {
         if (!disabled) {
           setState((prev) =>
