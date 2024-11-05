@@ -31,6 +31,7 @@
   background-color: white;
   border-radius: 9999px;
   transition: all 0.2s ease;
+  cursor: pointer;
 }
 .switch.checked.small {
   transform: translateX(calc(100%));
@@ -49,6 +50,7 @@
 
 .switch input[type="checkbox"] {
   position: absolute;
+  cursor: pointer;
   opacity: 0;
 }
 .switch.disabled input[type="checkbox"] {
