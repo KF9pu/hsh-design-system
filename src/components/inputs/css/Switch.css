@@ -49,6 +49,5 @@
 
 .switch input[type="checkbox"] {
   position: absolute;
-  cursor: pointer;
   opacity: 0;
 }
