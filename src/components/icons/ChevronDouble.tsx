@@ -4,6 +4,7 @@ interface ChevronDoubleProps extends HtmlHTMLAttributes<HTMLOrSVGElement> {
   thick?: true;
   small?: true;
   color?: string;
+  size?: number;
   right?: true;
 }
 
@@ -12,6 +13,7 @@ const ChevronDouble: React.FC<ChevronDoubleProps> = ({
   small,
   right,
   color = "#171719",
+  size = 24,
   ...rest
 }) => {
   const getRotation = () => (right ? "180deg" : "0deg");
@@ -19,8 +21,8 @@ const ChevronDouble: React.FC<ChevronDoubleProps> = ({
   const renderIcon = (pathData: string) => (
     <svg
       style={{ transform: `rotate(${getRotation()})` }}
-      width="24"
-      height="24"
+      width={size}
+      height={size}
       viewBox="0 0 24 24"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"

@@ -2,11 +2,13 @@ import React, { HtmlHTMLAttributes } from "react";
 
 interface LogoYouTubeProps extends HtmlHTMLAttributes<HTMLOrSVGElement> {
   color?: string;
+  size?: number;
   real?: true;
 }
 
 const LogoYouTube: React.FC<LogoYouTubeProps> = ({
   color = "#171719",
+  size = 24,
   real,
   ...rest
 }) => {
@@ -14,8 +16,8 @@ const LogoYouTube: React.FC<LogoYouTubeProps> = ({
     <>
       {real ? (
         <svg
-          width="24"
-          height="24"
+          width={size}
+          height={size}
           viewBox="0 0 24 24"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
@@ -32,8 +34,8 @@ const LogoYouTube: React.FC<LogoYouTubeProps> = ({
         </svg>
       ) : (
         <svg
-          width="24"
-          height="24"
+          width={size}
+          height={size}
           viewBox="0 0 24 24"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"

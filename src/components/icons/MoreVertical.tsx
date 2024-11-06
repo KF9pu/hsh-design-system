@@ -3,11 +3,13 @@ import React, { HtmlHTMLAttributes } from "react";
 interface MoreVerticalProps extends HtmlHTMLAttributes<HTMLOrSVGElement> {
   tight?: true;
   color?: string;
+  size?: number;
 }
 
 const MoreVertical: React.FC<MoreVerticalProps> = ({
   tight = false,
   color = "#171719",
+  size = 24,
   ...rest
 }) => {
   return (
@@ -15,7 +17,7 @@ const MoreVertical: React.FC<MoreVerticalProps> = ({
       {tight ? (
         <svg
           width="12"
-          height="24"
+          height={size}
           viewBox="0 0 12 24"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
@@ -36,8 +38,8 @@ const MoreVertical: React.FC<MoreVerticalProps> = ({
         </svg>
       ) : (
         <svg
-          width="24"
-          height="24"
+          width={size}
+          height={size}
           viewBox="0 0 24 24"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"

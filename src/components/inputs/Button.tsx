@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import "./css/Button.css";
+import * as Icons from "../icons";
+import { IconName } from "./Icons";
 
 export enum ButtonSize {
   small = "small",
@@ -17,13 +19,10 @@ export enum ButtonInteraction {
   pressed = "pressed",
 }
 
-export enum ButtonIcon {
-  android = "",
-}
-
 interface ButtonProps {
   type?: ButtonType;
   disabled?: boolean;
+  icon?: IconName;
 }
 
 const Button: React.FC<ButtonProps> = ({
@@ -31,6 +30,7 @@ const Button: React.FC<ButtonProps> = ({
   disabled = false,
 }) => {
   const [Interaction, setInteraction] = useState();
+  const IconComponent = Icons["ArrowDown"];
   return (
     <button className={`${type} ${Interaction}`} disabled={disabled}></button>
   );

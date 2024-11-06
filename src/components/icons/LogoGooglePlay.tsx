@@ -2,11 +2,13 @@ import React, { HtmlHTMLAttributes } from "react";
 
 interface LogoGooglePlayProps extends HtmlHTMLAttributes<HTMLOrSVGElement> {
   color?: string;
+  size?: number;
   real?: true;
 }
 
 const LogoGooglePlay: React.FC<LogoGooglePlayProps> = ({
   color = "#171719",
+  size = 24,
   real,
   ...rest
 }) => {
@@ -14,8 +16,8 @@ const LogoGooglePlay: React.FC<LogoGooglePlayProps> = ({
     <>
       {real ? (
         <svg
-          width="24"
-          height="24"
+          width={size}
+          height={size}
           viewBox="0 0 24 24"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
@@ -40,8 +42,8 @@ const LogoGooglePlay: React.FC<LogoGooglePlayProps> = ({
         </svg>
       ) : (
         <svg
-          width="24"
-          height="24"
+          width={size}
+          height={size}
           viewBox="0 0 24 24"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"

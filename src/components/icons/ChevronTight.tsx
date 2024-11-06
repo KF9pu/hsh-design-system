@@ -4,6 +4,7 @@ interface ChevronTightProps extends HtmlHTMLAttributes<HTMLOrSVGElement> {
   thick?: true;
   small?: true;
   color?: string;
+  size?: number;
   up?: true;
   down?: true;
   right?: true;
@@ -16,6 +17,7 @@ const ChevronTight: React.FC<ChevronTightProps> = ({
   down,
   right,
   color = "#171719",
+  size = 24,
   ...rest
 }) => {
   const getRotation = () => {
@@ -29,7 +31,7 @@ const ChevronTight: React.FC<ChevronTightProps> = ({
     <svg
       style={{ transform: `rotate(${getRotation()})` }}
       width="12"
-      height="24"
+      height={size}
       viewBox="0 0 12 24"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"

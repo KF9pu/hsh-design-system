@@ -2,11 +2,13 @@ import React, { HtmlHTMLAttributes } from "react";
 
 interface LogoLinkedInProps extends HtmlHTMLAttributes<HTMLOrSVGElement> {
   color?: string;
+  size?: number;
   real?: true;
 }
 
 const LogoLinkedIn: React.FC<LogoLinkedInProps> = ({
   color = "#171719",
+  size = 24,
   real,
   ...rest
 }) => {
@@ -14,8 +16,8 @@ const LogoLinkedIn: React.FC<LogoLinkedInProps> = ({
     <>
       {real ? (
         <svg
-          width="24"
-          height="24"
+          width={size}
+          height={size}
           viewBox="0 0 24 24"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
@@ -36,8 +38,8 @@ const LogoLinkedIn: React.FC<LogoLinkedInProps> = ({
         </svg>
       ) : (
         <svg
-          width="24"
-          height="24"
+          width={size}
+          height={size}
           viewBox="0 0 24 24"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
