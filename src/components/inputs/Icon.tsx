@@ -1,5 +1,5 @@
 import React from "react";
-
+import * as Icons from "../icons";
 export enum IconName {
   Android = "Android",
   Apps = "Apps",
@@ -119,7 +119,6 @@ export enum IconName {
   Template = "Template",
   Thumbnail = "Thumbnail",
   Thunder = "Thunder",
-  ToggleMenu = "ToggleMenu",
   Trash = "Trash",
   Triangle = "Triangle",
   TriangleExclamation = "TriangleExclamation",
@@ -131,13 +130,14 @@ export enum IconName {
   Write = "Write",
 }
 
-interface IconsProps {
+interface IconProps {
   name: IconName;
   size?: number;
+  color?: string;
 }
 
-const Icons: React.FC<IconsProps> = ({ name, size = 20 }) => {
+const Icon: React.FC<IconProps> = ({ name, size = 20, color = "#171719" }) => {
   const IconComponent = Icons[name as IconName];
-  return <IconComponent />;
+  return <IconComponent size={size} color={color} />;
 };
-export default Icons;
+export default Icon;
