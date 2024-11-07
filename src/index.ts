@@ -1,11 +1,6 @@
 import "./theme.css";
 export { default as useDefaultLoading } from "./hooks/useDefaultLoading";
 export { default as useMediaQuery } from "./hooks/useMediaQuery";
-export { default as Checkbox } from "./components/inputs/CheckBox";
-export * from "./components/inputs/CheckBox";
-export { default as Radio } from "./components/inputs/Radio";
-export * from "./components/inputs/Radio";
-export { default as Switch } from "./components/inputs/Switch";
-export * from "./components/inputs/Switch";
 export { default as LoadingFadeBubble } from "./components/animationBoxs/LoadingFadeBubble";
 export * from "./components/icons";
+export * from "./components/inputs";
