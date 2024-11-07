@@ -10,7 +10,9 @@ export enum ButtonSize {
 
 export enum ButtonType {
   solid = "solid",
-  outline = "outline",
+  outlinePrimary = "outlinePrimary",
+  outlineSecondary = "outlineSecondary",
+  outlineAssistive = "outlineAssistive",
 }
 
 export enum ButtonInteraction {
@@ -20,42 +22,56 @@ export enum ButtonInteraction {
 
 interface ButtonProps extends HtmlHTMLAttributes<HTMLButtonElement> {
   type?: ButtonType;
+  size?: ButtonSize;
   disabled?: boolean;
   leftIcon?: IconName; // 왼쪽 아이콘
   rightIcon?: IconName; // 오른쪽 아이콘
   leftIconColor?: string; // 왼쪽 아이콘 색상
   rightIconColor?: string; // 오른쪽 아이콘 색상
-  leftIconSize?: number; // 왼쪽 아이콘 크기
-  rightIconSize?: number; // 오른쪽 아이콘 크기
 }
 
 const Button: React.FC<ButtonProps> = ({
   type = ButtonType.solid,
+  size = ButtonSize.medium,
   disabled = false,
   leftIcon,
   rightIcon,
   children,
   leftIconColor = "#171719", // 기본값 설정
   rightIconColor = "#171719", // 기본값 설정
-  leftIconSize = 20, // 기본값 설정
-  rightIconSize = 20, // 기본값 설정
+  className,
+  ...rest
 }) => {
-  const [Interaction, setInteraction] = useState();
-  const LeftIconComponent = leftIcon ? Icon[leftIcon] : null;
-  const RightIconComponent = rightIcon ? Icon[rightIcon] : null;
+  const [Interaction, setInteraction] = useState<ButtonInteraction>(
+    ButtonInteraction.normal
+  );
+
+  const IconSize = {
+    [ButtonSize.small as ButtonSize]: 16,
+    [ButtonSize.medium as ButtonSize]: 18,
+    [ButtonSize.large as ButtonSize]: 20,
+  };
+
+  const LeftIconComponent = leftIcon ? (
+    <Icon name={leftIcon} color={leftIconColor} size={IconSize[size]} />
+  ) : null;
+  const RightIconComponent = rightIcon ? (
+    <Icon name={rightIcon} color={rightIconColor} size={IconSize[size]} />
+  ) : null;
 
   return (
-    <div className="button-wapper">
-      <button className={`${type} ${Interaction}`} disabled={disabled}>
-        {LeftIconComponent && (
-          <LeftIconComponent color={leftIconColor} size={leftIconSize} />
-        )}
+    <div
+      className={`button-wrapper ${type} ${className}`}
+      onMouseDown={() => setInteraction(ButtonInteraction.pressed)}
+      onMouseLeave={() => setInteraction(ButtonInteraction.normal)}
+      onMouseUp={() => setInteraction(ButtonInteraction.normal)}
+    >
+      <button className={`${size} ${type}`} disabled={disabled} {...rest}>
+        {LeftIconComponent}
         {children}
-        {RightIconComponent && (
-          <RightIconComponent color={rightIconColor} size={rightIconSize} />
-        )}
+        {RightIconComponent}
       </button>
-      <div className="interaction" />
+      <div className={`interaction ${Interaction}`} />
     </div>
   );
 };

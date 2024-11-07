@@ -1,0 +1,85 @@
+.button-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: fit-content;
+  height: fit-content;
+  border-radius: 10px;
+  user-select: none;
+}
+.button-wrapper.solid {
+  background-color: var(--primary-normal);
+  color: white;
+}
+.button-wrapper.outlinePrimary,
+.button-wrapper.outlineSecondary,
+.button-wrapper.outlineAssistive {
+  background-color: white;
+  outline: none;
+}
+button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  background-color: transparent;
+}
+
+button:focus {
+  background-color: rgba(0, 0, 0, 0.12);
+}
+
+button:hover {
+  background-color: rgba(0, 0, 0, 0.075);
+}
+
+button.small {
+  padding: 7px 14px;
+  font-size: 14px;
+  gap: 6px;
+}
+button.medium {
+  padding: 9px 20px;
+  font-size: 16px;
+  gap: 8px;
+}
+button.large {
+  padding: 12px 28px;
+  font-size: 20px;
+  gap: 10px;
+}
+button.outlinePrimary,
+button.outlineSecondary,
+button.outlineAssistive {
+  color: var(--primary-normal);
+  border: 2px solid;
+}
+
+button.outlinePrimary {
+  border-color: var(--primary-normal);
+}
+button.outlineSecondary {
+  border-color: rgba(112, 115, 124, 0.22);
+}
+button.outlineAssistive {
+  border-color: rgba(112, 115, 124, 0.22);
+  color: #171719;
+}
+
+.interaction {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  border-radius: 10px;
+}
+
+.interaction.normal {
+  background-color: rgba(0, 0, 0, 0);
+}
+.interaction.pressed {
+  background-color: rgba(0, 0, 0, 0.18);
+}
