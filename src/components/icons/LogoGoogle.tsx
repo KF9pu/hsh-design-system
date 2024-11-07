@@ -1,8 +1,9 @@
 import React, { HtmlHTMLAttributes } from "react";
 
-const LogoGoogle: React.FC<HtmlHTMLAttributes<HTMLOrSVGElement>> = ({
-  ...rest
-}) => {
+interface LogoGoogleProps extends HtmlHTMLAttributes<HTMLOrSVGElement> {
+  size?: number;
+}
+const LogoGoogle: React.FC<LogoGoogleProps> = ({ size = 24, ...rest }) => {
   return (
     <svg
       width={size}
