@@ -1,5 +1,5 @@
 import React, { HtmlHTMLAttributes, useState } from "react";
-import "./css/Button.css";
+import "./Button.css";
 import Icon, { IconName } from "./Icon";
 
 export enum ButtonSize {
@@ -61,7 +61,9 @@ const Button: React.FC<ButtonProps> = ({
 
   return (
     <div
-      className={`button-wrapper ${type} ${className}`}
+      className={`button-wrapper ${type} ${className} ${
+        disabled ? "disabled" : ""
+      }`}
       onMouseDown={() => setInteraction(ButtonInteraction.pressed)}
       onMouseLeave={() => setInteraction(ButtonInteraction.normal)}
       onMouseUp={() => setInteraction(ButtonInteraction.normal)}

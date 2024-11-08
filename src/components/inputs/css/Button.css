@@ -8,6 +8,9 @@
   border-radius: 10px;
   user-select: none;
 }
+.button-wrapper.disabled {
+  opacity: 0.5;
+}
 .button-wrapper.solid {
   background-color: var(--primary-normal);
   color: white;
@@ -25,15 +28,9 @@ button {
   border-radius: 10px;
   background-color: transparent;
 }
-
-button:focus {
-  background-color: rgba(0, 0, 0, 0.12);
+button:disabled {
+  cursor: not-allowed;
 }
-
-button:hover {
-  background-color: rgba(0, 0, 0, 0.075);
-}
-
 button.small {
   padding: 7px 14px;
   font-size: 14px;
@@ -56,6 +53,12 @@ button.outlineAssistive {
   border: 2px solid;
 }
 
+button.text.medium {
+  padding: 6px 8px;
+}
+button.text.large {
+  padding: 12px 28px;
+}
 button.outlinePrimary {
   border-color: var(--primary-normal);
 }
@@ -74,12 +77,26 @@ button.outlineAssistive {
   width: 100%;
   height: 100%;
   pointer-events: none;
+  transition: all 0.3s ease;
   border-radius: 10px;
 }
 
 .interaction.normal {
   background-color: rgba(0, 0, 0, 0);
 }
+
+button:focus + .interaction.normal {
+  background-color: rgba(0, 0, 0, 0.12);
+}
+
+button:hover + .interaction.normal {
+  background-color: rgba(0, 0, 0, 0.075);
+}
+
+.button-wrapper.disabled .interaction.normal {
+  background-color: rgba(0, 0, 0, 0);
+}
+
 .interaction.pressed {
   background-color: rgba(0, 0, 0, 0.18);
 }
