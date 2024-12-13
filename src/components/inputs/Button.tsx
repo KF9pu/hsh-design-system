@@ -1,4 +1,4 @@
-import React, { HtmlHTMLAttributes, useState } from "react";
+import React, { ButtonHTMLAttributes, useState } from "react";
 import "./css/Button.css";
 import Icon, { IconName } from "./Icon";
 
@@ -20,7 +20,7 @@ export enum ButtonInteraction {
   pressed = "pressed",
 }
 
-interface ButtonProps extends HtmlHTMLAttributes<HTMLButtonElement> {
+interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   type?: ButtonType;
   size?: ButtonSize;
   disabled?: boolean;
@@ -68,7 +68,11 @@ const Button: React.FC<ButtonProps> = ({
       onMouseLeave={() => setInteraction(ButtonInteraction.normal)}
       onMouseUp={() => setInteraction(ButtonInteraction.normal)}
     >
-      <button className={`${size} ${type}`} disabled={disabled} {...rest}>
+      <button
+        className={`${size} ${type} ${className ?? ""}`}
+        disabled={disabled}
+        {...rest}
+      >
         {LeftIconComponent}
         {children}
         {RightIconComponent}
